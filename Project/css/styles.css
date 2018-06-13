@@ -1,0 +1,384 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+ul, li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+.container {
+	width: 95%;
+	margin: auto;
+	
+}
+
+/* CABEÇALHO */
+
+.cabecalho {
+	width: 100%;
+	float: left;
+	padding: 1% 4%;
+}
+
+.logo {
+	width: 150px;
+	height: 56px;
+	float: left;
+	background: url(../img/logo_mobile.png) center center/150px no-repeat;
+	font-size: 0;
+}
+
+.btn-menu {
+	width: 56px;
+	height: 56px;
+	float: right;
+	text-align: center;
+	color: #fff;
+	border-radius: 56px;
+	cursor: pointer;
+	background: linear-gradient(to right,#ce2e3c,#e91e63);
+}
+
+/* MENU */
+.menu {
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background-color: rgba(0,0,0,0.9);
+	top: 0;
+	left: 0;
+}
+
+.btn-close {
+	font-size: 3em;
+	color: #fff;
+	float: right;
+	cursor: pointer;
+	margin-right: 5%;
+}
+
+.menu ul {
+	width: 100%;
+	float: left;
+	text-align: center;
+}
+
+.menu li {
+	padding: 1.5%;
+}
+
+.menu li a {
+	font-size: 1.5em;
+	color: #fff;
+	padding: 2% 3%;
+	text-transform: uppercase;
+}
+
+.menu li a:hover {
+	border: 1px solid #e91e63;
+}
+
+/* SECTION SLIDER */
+.slider {
+	width: 95%;
+	margin: auto;
+	margin-bottom: 70px;
+	overflow: hidden;
+}
+
+.slider ul {
+	display: flex;
+	width: 300%;
+
+	animation: change 20s infinite;
+}
+
+.slider li {
+	width: 100%;
+}
+
+.slider img {
+	width: 100%;
+}
+
+/* KEYFRAMES SLIDER */
+@keyframes change {
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+	
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+
+	50% {margin-left: -100%;}
+	70% {margin-left: -100%;}
+
+	75% {margin-left: -200%;}
+	100% {margin-left: -200%;}
+}
+
+/* SECTION BANNER DESTAQUES */
+.banner-destaques {
+	width: 95%;
+	margin: auto;
+	text-align: center;
+}
+
+.banner-wrapper {
+	width: 95%;
+	margin: auto;
+}
+
+.banner-destaques div {
+	margin-bottom: 15px;
+}
+
+.banner-destaques .title {
+	font-size: 29px;
+	margin: 0 0 10px;
+}
+
+.banner-destaques p {
+	font-size: 16px;
+	margin: 0 0 10px;
+}
+
+.banner-destaques .banner-photo {
+	overflow: hidden;
+}
+
+.banner-destaques .banner-photo img {
+	transition: all 1s ease;
+}
+
+.banner-destaques .banner-photo img:hover {
+	transform: scale(1.1);
+	border: 2px solid #e91e63;
+}
+
+/* SECTION BANNER MAIS VENDIDOS */
+	.banner-mais-vendidos {
+		display: none;
+	}
+
+/* SECTION BANNER LOOKS */
+	.banner-looks {
+		width: 95%;
+		margin: auto;
+		text-align: center;
+	}
+
+	.banner-looks h2,
+	.banner-looks p {
+		text-align: center;
+		margin: 5px 0;
+	}
+
+	.banner-looks h2 {
+		font-size: 29px;
+	}
+
+	.banner-looks .grid-wrapper {
+		display: grid;
+		width: 95%;
+		max-width: 100%;
+		margin: 30px auto;
+		grid-column-gap: 10px;
+		grid-row-gap: 10px;
+		grid-template-columns: 30% 30% 30%;
+	}
+
+	.banner-looks .banner-looks-photo {
+		overflow: hidden;
+	}
+
+	.banner-looks .banner-looks-photo img {
+		transition: all 1s ease;
+	}
+
+	.banner-looks .banner-looks-photo img:hover {
+		transform: scale(1.1);
+		border: 2px solid #e91e63;
+	}
+
+/* MOBILE FIRST SMARTPHONES */
+
+@media (min-width: 320px) {
+	.menu li a {
+		font-size: 1.3em;
+	}
+} 
+
+/* MOBILE FIRST TABLETS */
+@media (min-width: 768px) {
+	.logo {
+		width: 214px;
+		background: url(../img/logo_stl_shop.png) center center/214px no-repeat;
+	}
+
+	/* BANNER DESTAQUES */
+	.banner-destaques {
+		margin-bottom: 290px;
+	}
+
+	.banner-wrapper {
+		text-align: left;
+	}
+
+	.banner-photo {
+		float: left;
+		width: 30%;
+	}
+
+	.banner-photo li {
+		padding-left: 30px;
+	}
+
+	/* BANNER MAIS VENDIDOS */
+	.banner-mais-vendidos {
+		display: block;
+		width: 95%;
+		margin: auto;
+		text-align: center;
+		margin-bottom: 650px;
+	}
+
+	.banner-mais-vendidos-wrapper {
+		width: 95%;
+		margin: auto;
+	}
+
+	.banner-mais-vendidos-photo {
+		float: left;
+		width: 32%;
+		overflow: hidden;
+	}
+
+	.banner-destaques div {
+		margin-left: 15px;
+	}
+
+	.banner-mais-vendidos .title {
+		font-size: 29px;
+		margin: 0 0 10px;
+		text-align: center;
+	}
+
+	.banner-mais-vendidos p {
+		font-size: 16px;
+		margin: 0 0 10px;
+		text-align: center;
+	}
+
+	.banner-mais-vendidos .banner-mais-vendidos-photo  {
+		transition: all 1s ease;
+	}
+
+	.banner-mais-vendidos .banner-mais-vendidos-photo:hover {
+		transform: scale(1);
+		border: 2px solid #e91e63;
+	}
+
+	.banner-mais-vendidos .banner-mais-vendidos-photo:hover img {
+		transform: scale(1.1);
+		transition: all 1s ease-in;
+		filter: brightness(.5);
+	}
+
+	.banner-mais-vendidos-photo .produto-marca {
+		font-size: 1em;
+		font-weight: 600;
+		margin: 5px 0;
+	}
+
+	.banner-mais-vendidos-photo .produto-nome {
+		font-size: 1em;
+		font-weight: 400;
+		color: gray;
+		margin: 5px 0;
+		text-transform: uppercase;
+	}
+
+	.banner-mais-vendidos-photo .produto-icon ul {
+		display: flex;
+		justify-content: center;
+	}
+
+	.banner-mais-vendidos-photo .produto-icon ul li {
+		padding: 5px;
+	}
+
+	.banner-mais-vendidos-photo .produto-icon ul li a {
+		color: #e91e63;
+	}
+
+	.banner-mais-vendidos-photo .produto-valor {
+		font-size: 1em;
+		font-weight: 500;
+		margin: 5px 0;
+	}
+
+	.banner-mais-vendidos-photo .produto-valor-alt {
+		font-size: 0.9em;
+		font-weight: 500;
+		color: gray;
+		margin: 5px 0;
+	}
+	
+}
+
+@media (min-width: 960px) {
+	.logo {
+		width: 214px;
+		background: url(../img/logo_stl_shop.png) center center/214px no-repeat;
+	}
+
+}
+
+/* LARGE DEVICES - WIDE SCREENS */
+@media (min-width: 1200px) {
+	.btn-menu {
+		display: none;
+	}
+
+	.btn-close {
+		display: none;
+	}
+
+	.menu {
+		width: auto;
+		height: 56px;
+		line-height: 56px;
+		float: left;
+		background: #fff;
+		display: block !important;
+		position: static;
+	}
+
+	.menu li {
+		padding: 0;
+		float: left;
+	}
+
+	.menu li a {
+		color: #130400;
+		font-size: 1em;
+		padding: 0 0 0 20px;
+	}
+
+	.menu ul li a:hover {
+		border: none;
+		color: #e91e63;
+	}
+}
